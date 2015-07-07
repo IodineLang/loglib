@@ -1,0 +1,10 @@
+use loglib;
+
+func main () {
+    pLog = loglib.OutputLogger (0);
+    fLog = loglib.FileLogger ("./test.log", 0);
+    loglib.Logger.register (pLog);
+    loglib.Logger.register (fLog);
+    loglib.Logger.info ("Hi!");
+    loglib.Logger.fatal ("Fatal error.");
+}
