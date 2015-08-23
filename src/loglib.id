@@ -42,7 +42,7 @@ class BaseLogger {
     func BaseLogger (self, minLevel) {
         self.minLevel = minLevel;
         self.msgFmt = "[{3:d2}/{4:d2}/{5:d2} {0:d2}:{1:d2}:{2:d2}] [{6}]: {7}";
-        self.levels = hashMap ();
+        self.levels = HashMap ();
         self.levels ["INFO"] = 10;
         self.levels ["WARN"] = 20;
         self.levels ["ERROR"] = 30;
