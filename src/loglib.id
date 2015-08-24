@@ -8,8 +8,7 @@ class Logger {
             Logger.loggers.add (logger);
         }
         except (e as AttributeNotFoundException) {
-            Logger.loggers = list();
-            Logger.loggers.add (logger);
+            Logger.loggers = [logger];
         }
     }
     
@@ -42,7 +41,7 @@ class BaseLogger {
     func BaseLogger (self, minLevel) {
         self.minLevel = minLevel;
         self.msgFmt = "[{3:d2}/{4:d2}/{5:d2} {0:d2}:{1:d2}:{2:d2}] [{6}]: {7}";
-        self.levels = HashMap ();
+        self.levels = {};
         self.levels ["INFO"] = 10;
         self.levels ["WARN"] = 20;
         self.levels ["ERROR"] = 30;
